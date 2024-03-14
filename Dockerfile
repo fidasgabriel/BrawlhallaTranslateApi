@@ -9,5 +9,5 @@ FROM openjdk:17-jdk-slim
 
 COPY --from=BUILD /app/target/BrawlhallaTranslate-0.0.1-SNAPSHOT.jar BrawlhallaTranslate.jar
 
-EXPOSE 8080
+EXPOSE 8085
 ENTRYPOINT ["java", "-jar", "BrawlhallaTranslate.jar"]
