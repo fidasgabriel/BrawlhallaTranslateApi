@@ -7,7 +7,7 @@ RUN mvn clean package -DskipTests
 # Stage de pacote
 FROM openjdk:17-jdk-slim
 
-COPY --from=BUILD /app/target/BrawlhallaTranslate-0.0.1-SNAPSHOT.jar BrawlhallaTranslate.jar
+COPY --from=BUILD /app/target/BrawlhallaTranslate-0.0.1-SNAPSHOT.jar brawlhalla.jar
 
 EXPOSE 8085
-ENTRYPOINT ["java", "-jar", "BrawlhallaTranslate.jar"]
+ENTRYPOINT ["java", "-jar", "brawlhalla.jar"]
