@@ -48,6 +48,7 @@ public class TranslateController {
         return new BaseReturn(item);
     }
 
+    @CrossOrigin()
     @GetMapping("/crossovers")
     public List<Crossovers> getCrossovers(){
         List<Crossovers> crossovers = new ArrayList<>();
